@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Ejercicio 3 | Ejercicios tema 1 aprendizaje estadístico</title>
+  <meta name="description" content="Estos son los ejercicios resueltos del primer tema de aprendizaje estadístico." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Ejercicio 3 | Ejercicios tema 1 aprendizaje estadístico" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Estos son los ejercicios resueltos del primer tema de aprendizaje estadístico." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Ejercicio 3 | Ejercicios tema 1 aprendizaje estadístico" />
+  
+  <meta name="twitter:description" content="Estos son los ejercicios resueltos del primer tema de aprendizaje estadístico." />
+  
+
+<meta name="author" content="Jesús Secilla Martínez" />
+
+
+<meta name="date" content="2023-09-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="ejercicio-2.html"/>
+<link rel="next" href="ejercicio-4.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Ejercicios tema 1 aprendizaje estadistico</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Ejercicio 1</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#apartado-a"><i class="fa fa-check"></i><b>1.1</b> Apartado a</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#apartado-b"><i class="fa fa-check"></i><b>1.2</b> Apartado b</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#apartado-c"><i class="fa fa-check"></i><b>1.3</b> Apartado c</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#apartado-d"><i class="fa fa-check"></i><b>1.4</b> Apartado d</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ejercicio-2.html"><a href="ejercicio-2.html"><i class="fa fa-check"></i><b>2</b> Ejercicio 2</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ejercicio-2.html"><a href="ejercicio-2.html#apartado-a-1"><i class="fa fa-check"></i><b>2.1</b> Apartado a</a></li>
+<li class="chapter" data-level="2.2" data-path="ejercicio-2.html"><a href="ejercicio-2.html#apartado-b-1"><i class="fa fa-check"></i><b>2.2</b> Apartado b</a></li>
+<li class="chapter" data-level="2.3" data-path="ejercicio-2.html"><a href="ejercicio-2.html#apartado-c-1"><i class="fa fa-check"></i><b>2.3</b> Apartado c</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ejercicio-3.html"><a href="ejercicio-3.html"><i class="fa fa-check"></i><b>3</b> Ejercicio 3</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="ejercicio-3.html"><a href="ejercicio-3.html#apartado-a-2"><i class="fa fa-check"></i><b>3.1</b> Apartado a</a></li>
+<li class="chapter" data-level="3.2" data-path="ejercicio-3.html"><a href="ejercicio-3.html#apartado-b-2"><i class="fa fa-check"></i><b>3.2</b> Apartado b</a></li>
+<li class="chapter" data-level="3.3" data-path="ejercicio-3.html"><a href="ejercicio-3.html#apartado-c-2"><i class="fa fa-check"></i><b>3.3</b> Apartado c</a></li>
+<li class="chapter" data-level="3.4" data-path="ejercicio-3.html"><a href="ejercicio-3.html#apartado-d-1"><i class="fa fa-check"></i><b>3.4</b> Apartado d</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ejercicio-4.html"><a href="ejercicio-4.html"><i class="fa fa-check"></i><b>4</b> Ejercicio 4</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ejercicio-4.html"><a href="ejercicio-4.html#enunciado-y-variables"><i class="fa fa-check"></i><b>4.1</b> Enunciado y variables</a></li>
+<li class="chapter" data-level="4.2" data-path="ejercicio-4.html"><a href="ejercicio-4.html#apartado-a-3"><i class="fa fa-check"></i><b>4.2</b> Apartado a</a></li>
+<li class="chapter" data-level="4.3" data-path="ejercicio-4.html"><a href="ejercicio-4.html#apartado-b-3"><i class="fa fa-check"></i><b>4.3</b> Apartado b</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="ejercicio-4.html"><a href="ejercicio-4.html#apps"><i class="fa fa-check"></i><b>4.3.1</b> Apps</a></li>
+<li class="chapter" data-level="4.3.2" data-path="ejercicio-4.html"><a href="ejercicio-4.html#accept"><i class="fa fa-check"></i><b>4.3.2</b> Accept</a></li>
+<li class="chapter" data-level="4.3.3" data-path="ejercicio-4.html"><a href="ejercicio-4.html#enroll"><i class="fa fa-check"></i><b>4.3.3</b> Enroll</a></li>
+<li class="chapter" data-level="4.3.4" data-path="ejercicio-4.html"><a href="ejercicio-4.html#top10perc"><i class="fa fa-check"></i><b>4.3.4</b> Top10perc</a></li>
+<li class="chapter" data-level="4.3.5" data-path="ejercicio-4.html"><a href="ejercicio-4.html#top25perc"><i class="fa fa-check"></i><b>4.3.5</b> Top25perc</a></li>
+<li class="chapter" data-level="4.3.6" data-path="ejercicio-4.html"><a href="ejercicio-4.html#f.undergrad"><i class="fa fa-check"></i><b>4.3.6</b> F.Undergrad</a></li>
+<li class="chapter" data-level="4.3.7" data-path="ejercicio-4.html"><a href="ejercicio-4.html#p.undergrad"><i class="fa fa-check"></i><b>4.3.7</b> P.Undergrad</a></li>
+<li class="chapter" data-level="4.3.8" data-path="ejercicio-4.html"><a href="ejercicio-4.html#outstate"><i class="fa fa-check"></i><b>4.3.8</b> Outstate</a></li>
+<li class="chapter" data-level="4.3.9" data-path="ejercicio-4.html"><a href="ejercicio-4.html#room.board"><i class="fa fa-check"></i><b>4.3.9</b> Room.Board</a></li>
+<li class="chapter" data-level="4.3.10" data-path="ejercicio-4.html"><a href="ejercicio-4.html#books"><i class="fa fa-check"></i><b>4.3.10</b> Books</a></li>
+<li class="chapter" data-level="4.3.11" data-path="ejercicio-4.html"><a href="ejercicio-4.html#personal"><i class="fa fa-check"></i><b>4.3.11</b> Personal</a></li>
+<li class="chapter" data-level="4.3.12" data-path="ejercicio-4.html"><a href="ejercicio-4.html#phd"><i class="fa fa-check"></i><b>4.3.12</b> PhD</a></li>
+<li class="chapter" data-level="4.3.13" data-path="ejercicio-4.html"><a href="ejercicio-4.html#terminal"><i class="fa fa-check"></i><b>4.3.13</b> Terminal</a></li>
+<li class="chapter" data-level="4.3.14" data-path="ejercicio-4.html"><a href="ejercicio-4.html#s.f.ratio"><i class="fa fa-check"></i><b>4.3.14</b> S.F.Ratio</a></li>
+<li class="chapter" data-level="4.3.15" data-path="ejercicio-4.html"><a href="ejercicio-4.html#perc.alumni"><i class="fa fa-check"></i><b>4.3.15</b> perc.alumni</a></li>
+<li class="chapter" data-level="4.3.16" data-path="ejercicio-4.html"><a href="ejercicio-4.html#expend"><i class="fa fa-check"></i><b>4.3.16</b> Expend</a></li>
+<li class="chapter" data-level="4.3.17" data-path="ejercicio-4.html"><a href="ejercicio-4.html#grad.rate"><i class="fa fa-check"></i><b>4.3.17</b> Grad.Rate</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="ejercicio-4.html"><a href="ejercicio-4.html#apartado-c-3"><i class="fa fa-check"></i><b>4.4</b> Apartado c</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="ejercicio-4.html"><a href="ejercicio-4.html#creación-de-la-variable-top"><i class="fa fa-check"></i><b>4.4.1</b> Creación de la variable Top</a></li>
+<li class="chapter" data-level="4.4.2" data-path="ejercicio-4.html"><a href="ejercicio-4.html#diagrama-de-caja-con-phd"><i class="fa fa-check"></i><b>4.4.2</b> Diagrama de caja con Phd</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ejercicio-5.html"><a href="ejercicio-5.html"><i class="fa fa-check"></i><b>5</b> Ejercicio 5</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="ejercicio-5.html"><a href="ejercicio-5.html#enunciado-y-variables-1"><i class="fa fa-check"></i><b>5.1</b> Enunciado y variables</a></li>
+<li class="chapter" data-level="5.2" data-path="ejercicio-5.html"><a href="ejercicio-5.html#apartado-a-4"><i class="fa fa-check"></i><b>5.2</b> Apartado a</a></li>
+<li class="chapter" data-level="5.3" data-path="ejercicio-5.html"><a href="ejercicio-5.html#apartado-b-4"><i class="fa fa-check"></i><b>5.3</b> Apartado b</a></li>
+<li class="chapter" data-level="5.4" data-path="ejercicio-5.html"><a href="ejercicio-5.html#apartado-c-4"><i class="fa fa-check"></i><b>5.4</b> Apartado c</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>6</b> Hello bookdown</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>6.1</b> A section</a>
+<ul>
+<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>7</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>7.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="7.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>7.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>8</b> Parts</a></li>
+<li class="chapter" data-level="9" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>9</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>9.1</b> Footnotes</a></li>
+<li class="chapter" data-level="9.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>9.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>10</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>10.1</b> Equations</a></li>
+<li class="chapter" data-level="10.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>10.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="10.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>10.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>11</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>11.1</b> Publishing</a></li>
+<li class="chapter" data-level="11.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>11.2</b> 404 pages</a></li>
+<li class="chapter" data-level="11.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>11.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ejercicios tema 1 aprendizaje estadístico</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ejercicio-3" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Ejercicio 3<a href="ejercicio-3.html#ejercicio-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p>Para este ejercicio se utiliza el conjunto de datos de valores de la vivienda en suburbios de Boston de nombre Boston, que se puede encontrar en la librería ISLR2. El fichero contiene una serie de variables para 506 suburbios en Boston. Las variables son:</p>
+</blockquote>
+<ul>
+<li><p>crim : Tasa de criminalidad per cápita.</p></li>
+<li><p>zn: Proporción de terreno residencial dividido en zonas para lotes de más de 25000 pies cuadrados.</p></li>
+<li><p>indus: Proporción de acres comerciales no minoristas.</p></li>
+<li><p>chas: Variable ficticia de Charles River (=1 si el tramo limita con el río; 0 en caso contrario).</p></li>
+<li><p>nox: Concentración de óxidos de nitrógeno (partes por 10millones).</p></li>
+<li><p>rm: Número medio de habitaciones por vivienda.</p></li>
+<li><p>age: Proporción de unidades ocupadas por sus propietarios construidas antes de 1940</p></li>
+<li><p>dis: Media ponderada de las distancias a cinco centros de empleo de Boston.</p></li>
+<li><p>rad: Índice de accesibilidad a carreteras radiales.</p></li>
+<li><p>tax: Tasa de impuesto a la propiedad de valor total por 10000$</p></li>
+<li><p>ptratio: Proporción alumno-profesor por ciudad.</p></li>
+<li><p>lstat: Estatus más bajo de la población (porcentaje).</p></li>
+<li><p>medv: Valor mediano de las viviendas ocupadas por sus propietarios en 1000$</p></li>
+</ul>
+<p><strong><em>Nuestro objetivo es predecir la variable medv, es decir el precio mediano de la vivienda, con el resto de variables, que actuarán como predictores.</em></strong></p>
+<div id="apartado-a-2" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Apartado a<a href="ejercicio-3.html#apartado-a-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>Cargar la librería ISLR2 en memoria e importar el conjunto de datos Boston. Comprobar que la dimensión del data.frame correspondiente al conjunto de datos es 506×13, es decir, que disponemos de 506 suburbios y 13 variables. Además, ver las primeras filas del conjunto de datos con la función head.</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="ejercicio-3.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ISLR2)</span></code></pre></div>
+<pre><code>## Warning: package &#39;ISLR2&#39; was built under R version 4.3.1</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="ejercicio-3.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;Boston&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="ejercicio-3.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is</span>(Boston)</span></code></pre></div>
+<pre><code>## [1] &quot;data.frame&quot; &quot;list&quot;       &quot;oldClass&quot;   &quot;vector&quot;</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="ejercicio-3.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(Boston)</span></code></pre></div>
+<pre><code>## [1] 506  13</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="ejercicio-3.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Boston)</span></code></pre></div>
+<pre><code>##      crim zn indus chas   nox    rm  age    dis rad tax
+## 1 0.00632 18  2.31    0 0.538 6.575 65.2 4.0900   1 296
+## 2 0.02731  0  7.07    0 0.469 6.421 78.9 4.9671   2 242
+## 3 0.02729  0  7.07    0 0.469 7.185 61.1 4.9671   2 242
+## 4 0.03237  0  2.18    0 0.458 6.998 45.8 6.0622   3 222
+## 5 0.06905  0  2.18    0 0.458 7.147 54.2 6.0622   3 222
+## 6 0.02985  0  2.18    0 0.458 6.430 58.7 6.0622   3 222
+##   ptratio lstat medv
+## 1    15.3  4.98 24.0
+## 2    17.8  9.14 21.6
+## 3    17.8  4.03 34.7
+## 4    18.7  2.94 33.4
+## 5    18.7  5.33 36.2
+## 6    18.7  5.21 28.7</code></pre>
+</div>
+<div id="apartado-b-2" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Apartado b<a href="ejercicio-3.html#apartado-b-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>Utilizar la función de summary para producir un resumen numérico de la variable medv. Comentar las principales características de la variable mediante el resumen numérico obtenido. Por ejemplo, comparar la media muestral y la mediana muestral y los tres cuartiles de la variable medv para tener una idea de la forma de la distribución, comparar los valores máximo y mínimo de la variable con dichos cuartiles, etc. Además, obtener un histograma y un diagrama de caja (boxplot) de la variable medv y relacionar ambos gráficos con los comentarios anteriores.</p>
+</blockquote>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="ejercicio-3.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Boston<span class="sc">$</span>medv)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    5.00   17.02   21.20   22.53   25.00   50.00</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="ejercicio-3.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb12-2"><a href="ejercicio-3.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(Boston<span class="sc">$</span>medv)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="ejercicio-3.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-2"><a href="ejercicio-3.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb13-3"><a href="ejercicio-3.html#cb13-3" aria-hidden="true" tabindex="-1"></a>histograma <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Boston, <span class="fu">aes</span>(<span class="at">x =</span> medv)) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="ejercicio-3.html#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>( <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="ejercicio-3.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-6"><a href="ejercicio-3.html#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Histograma de Datos&quot;</span>,</span>
+<span id="cb13-7"><a href="ejercicio-3.html#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Valores&quot;</span>,</span>
+<span id="cb13-8"><a href="ejercicio-3.html#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Frecuencia&quot;</span></span>
+<span id="cb13-9"><a href="ejercicio-3.html#cb13-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb13-10"><a href="ejercicio-3.html#cb13-10" aria-hidden="true" tabindex="-1"></a>histograma</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with
+## `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="ejercicio-3.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Boston<span class="sc">$</span>medv)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+</div>
+<div id="apartado-c-2" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Apartado c<a href="ejercicio-3.html#apartado-c-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>Uno de los predictores chas es cualitativo (binario). Transformar el predictor en un factor mediante Boston<span class="math inline">\(chas &lt;- as.factor(Boston\)</span>chas) para que R entienda que se trata de una variable cualitativa y no una cuantitativa. A continuación, obtener un resumen (summary) de dicho predictor e indicar que información proporciona en base a dicho resumen. Además, obtener un diagrama de caja de medv en función de chas. ¿Qué podemos concluir del gráfico?</p>
+</blockquote>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="ejercicio-3.html#cb16-1" aria-hidden="true" tabindex="-1"></a>Boston<span class="sc">$</span>chas <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(Boston<span class="sc">$</span>chas)</span>
+<span id="cb16-2"><a href="ejercicio-3.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(Boston<span class="sc">$</span>chas)</span></code></pre></div>
+<pre><code>##   0   1 
+## 471  35</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="ejercicio-3.html#cb18-1" aria-hidden="true" tabindex="-1"></a>color1 <span class="ot">=</span> <span class="st">&quot;blue&quot;</span></span>
+<span id="cb18-2"><a href="ejercicio-3.html#cb18-2" aria-hidden="true" tabindex="-1"></a>color2 <span class="ot">=</span> <span class="st">&quot;red&quot;</span></span>
+<span id="cb18-3"><a href="ejercicio-3.html#cb18-3" aria-hidden="true" tabindex="-1"></a>boxplot <span class="ot">=</span> <span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>chas,<span class="at">y=</span>medv,<span class="at">fill=</span>chas)) <span class="sc">+</span> </span>
+<span id="cb18-4"><a href="ejercicio-3.html#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb18-5"><a href="ejercicio-3.html#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb18-6"><a href="ejercicio-3.html#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(color1, color2))</span>
+<span id="cb18-7"><a href="ejercicio-3.html#cb18-7" aria-hidden="true" tabindex="-1"></a>boxplot</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="apartado-d-1" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Apartado d<a href="ejercicio-3.html#apartado-d-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="ejercicio-3.html#cb19-1" aria-hidden="true" tabindex="-1"></a>color_1 <span class="ot">=</span> <span class="st">&quot;blue&quot;</span></span>
+<span id="cb19-2"><a href="ejercicio-3.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>crim,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb19-3"><a href="ejercicio-3.html#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="ejercicio-3.html#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="ejercicio-3.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>zn,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb20-2"><a href="ejercicio-3.html#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="ejercicio-3.html#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="ejercicio-3.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>indus,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb21-2"><a href="ejercicio-3.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="ejercicio-3.html#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-3.png" width="672" /></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="ejercicio-3.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>nox,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb22-2"><a href="ejercicio-3.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="ejercicio-3.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-4.png" width="672" /></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="ejercicio-3.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>rm,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb23-2"><a href="ejercicio-3.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="ejercicio-3.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-5.png" width="672" /></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="ejercicio-3.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>age,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb24-2"><a href="ejercicio-3.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="ejercicio-3.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-6.png" width="672" /></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="ejercicio-3.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>dis,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb25-2"><a href="ejercicio-3.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb25-3"><a href="ejercicio-3.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-7.png" width="672" /></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="ejercicio-3.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>rad,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb26-2"><a href="ejercicio-3.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="ejercicio-3.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-8.png" width="672" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="ejercicio-3.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>tax,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb27-2"><a href="ejercicio-3.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="ejercicio-3.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-9.png" width="672" /></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="ejercicio-3.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>ptratio,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb28-2"><a href="ejercicio-3.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb28-3"><a href="ejercicio-3.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-10.png" width="672" /></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="ejercicio-3.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Boston,<span class="fu">aes</span>(<span class="at">x=</span>lstat,<span class="at">y=</span>medv)) <span class="sc">+</span> </span>
+<span id="cb29-2"><a href="ejercicio-3.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_size=</span><span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb29-3"><a href="ejercicio-3.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">2</span>,<span class="at">color=</span>color_1)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-11.png" width="672" /></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ejercicio-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ejercicio-4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
